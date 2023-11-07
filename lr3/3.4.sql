@@ -2,8 +2,7 @@
 
 
 USE cd;
-SELECT concat(mem.firstname,' ', mem.surname) AS membername,
-concat(rec.firstname,' ', rec.surname) AS recname
-FROM members mem
-LEFT JOIN members rec ON mem.recommendedby = rec.memid 
-WHERE mem.memid !=0 ORDER BY mem.surname;
+SELECT memb1.surname, memb1.firstname, memb2.surname, memb2.firstname
+FROM members memb1
+LEFT JOIN members memb2 ON memb1.recommendedby = memb2.memid
+ORDER BY memb1.surname, memb1.firstname;

@@ -1,5 +1,6 @@
 /*Выберите членов клуба, которые рекомендовали других членов для вступления.*/
 
 USE cd;
-SELECT concat (firstname,' ', surname) AS membername FROM members
-WHERE memid IN (SELECT recommendedby FROM members) ;
+SELECT DISTINCT memb1.surname, memb2.firstname
+FROM members memb1, members memb2
+WHERE memb1.memid = memb2.recommendedby;
