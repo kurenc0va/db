@@ -1,1 +1,2 @@
-ppdokaopaopkoa
+USE cd;
+SELECT *FROM facilities;
