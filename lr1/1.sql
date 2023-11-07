@@ -1,6 +1,6 @@
 /*Обращаемся к базе "WORLD"*/
 USE world;
 /*Оттуда выбираем базу "City"*/
-SELECT name from city;
+SELECT name FROM city;
 /*Выбираем города на букву "a"*/
-SELECT name from city where name like "a%";
+SELECT name FROM city WHERE name like "a%";
