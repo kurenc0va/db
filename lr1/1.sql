@@ -1,3 +1,4 @@
+/*Обращаемся к базе "WORLD"*/
 use world;
 /*Оттуда выбираем базу "City"*/
 select name from city;
