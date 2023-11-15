@@ -4,6 +4,7 @@
 
 USE cd;
 START TRANSACTION;
+/*все записи в таблице bookings удаляем, затем возвращаем их обратно*/
 DELETE FROM bookings;
 SELECT * FROM bookings;
 ROLLBACK;

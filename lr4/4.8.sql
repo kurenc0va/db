@@ -7,7 +7,9 @@
 
 USE cd;
 START TRANSACTION;
+/* Удаляем запись о госте с memid = 37, из таблицы members*/ 
 DELETE FROM members WHERE memid = 37;
 SELECT * FROM members;
+/*Возвращаем все как было */
 ROLLBACK;
 SELECT * FROM members;
