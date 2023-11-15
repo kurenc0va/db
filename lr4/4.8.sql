@@ -4,3 +4,10 @@
 скриgт на GitHub.  Повторно выполните вышеуказанные действия завершив 
 транзакцию с сохранением всех изменений. Сравните полученные 
 результаты.*/
+
+USE cd;
+START TRANSACTION;
+DELETE FROM members WHERE memid = 37;
+SELECT * FROM members;
+ROLLBACK;
+SELECT * FROM members;
