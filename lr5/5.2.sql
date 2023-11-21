@@ -2,4 +2,4 @@
 теннисном клубе, стоимость аренды гостя в котором не менее 10.*/
 
 USE cd;
-SELECT COUNT(*) FROM facilities WHERE guestcost > 10;
+SELECT COUNT(*) AS "Всего зарегестрирвоанных объектов" FROM facilities WHERE guestcost > 10;
