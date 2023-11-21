@@ -5,10 +5,10 @@ USE cd;
 SELECT
     fac.facid AS Facid,
     fac.facility AS Facility,
-    COUNT(boo.slots) AS rec
+    COUNT(b.slots) AS reccommend
 FROM
     facilities fac
 JOIN
-    bookings boo ON boo.facid = fac.facid
+    bookings b ON b.facid = fac.facid
 GROUP BY
     fac.facid, fac.facility;
