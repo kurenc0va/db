@@ -1,3 +1,4 @@
+-- Active: 1696918614352@@localhost@3306@cd
 /* Рассчитайте количество аренд каждого из объектов клуба.*/
 USE cd;
 
@@ -5,7 +6,7 @@ USE cd;
 SELECT
     fac.facid AS Facid,
     fac.facility AS Facility,
-    COUNT(b.slots) AS reccommend
+    SUM(b.slots) AS reccommend
 FROM
     facilities fac
 JOIN
