@@ -4,8 +4,8 @@
 USE cd;
 SELECT f.facility AS "Название объекта",
     SUM(CASE WHEN b.memid = 0 THEN f.guestcost * b.slots
-        ELSE f.membercost * b.slots END) AS "Доход"
+        ELSE f.membercost * b.slots END) AS Dohod
 FROM facilities AS f
 LEFT JOIN bookings AS b ON b.facid = f.facid
 GROUP BY f.facility
-ORDER BY "Доход" DESC;
+ORDER BY Dohod DESC;
