@@ -4,5 +4,5 @@
 Используйте функцию нумерации row_number*/
  USE cd;
 SELECT ROW_NUMBER() OVER (ORDER BY joindate) AS 'Номер участника', 
-memid AS 'ID участника', firstname AS 'Имя участника', surname AS 'Фамилия участника', 
+memid AS 'ID', firstname AS 'Имя участника', surname AS 'Фамилия участника', 
 joindate AS 'Дата вступления в клуб' FROM members ORDER BY joindate;
