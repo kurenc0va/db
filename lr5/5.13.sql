@@ -2,3 +2,7 @@
 упорядоченный по дате присоединения. 
 Помните, что идентификаторы участников не обязательно будут последовательными. 
 Используйте функцию нумерации row_number*/
+ USE cd;
+SELECT ROW_NUMBER() OVER (ORDER BY joindate) AS 'Номер участника', 
+memid AS 'ID участника', firstname AS 'Имя участника', surname AS 'Фамилия участника', 
+joindate AS 'Дата вступления в клуб' FROM members ORDER BY joindate;
