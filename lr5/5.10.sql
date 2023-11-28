@@ -5,6 +5,7 @@
 месяца и слотов, отсортированных по идентификатору и месяцу. При вычислении 
 агрегированных значений для всех месяцев и всех facid возвращайте нулевые 
 значения в столбцах месяца и facid.*/
+
 USE cd; 
 SELECT 	IFNULL(table1.facid, 'Total') AS facid, IFNULL(table1.Month, 'Total') AS Month, SUM(table1.slots) AS 'Количество броней' 
 FROM (SELECT f.facid AS facid, MONTH(b.starttime) AS month, SUM(b.slots) AS slots
