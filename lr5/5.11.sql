@@ -7,7 +7,8 @@
 USE cd;
 SELECT
     f.facid AS "ID",
-    f.facility AS "Name",
+    f.facility AS "Имя участника
+    ",
     ROUND(SUM(b.slots)/2,2) AS "Общее количество часов"
 FROM facilities f
 JOIN bookings b ON f.facid = b.facid
