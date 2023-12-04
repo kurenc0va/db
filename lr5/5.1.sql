@@ -1,4 +1,4 @@
  /*Рассчитайте количество зарегистрированных объектов в теннисном клубе.*/
 USE cd;
 /*Выбираем количество записей в столбце "facility" таблицы "facilities"*/
-SELECT COUNT(facility) AS "Всего зарегестрированных объектов" FROM facilities;
+EXPLAIN SELECT COUNT(facid) AS "Всего зарегестрированных объектов" FROM facilities
